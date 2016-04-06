@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# 1) Download Valgrind
+curl -O http://valgrind.org/downloads/valgrind-3.10.0.tar.bz2
+
+# use md5sum to make sure it matches the one on the site
+md5sum valgrind-3.10.0.tar.bz2
+
+# 2) Unpack it.
+tar -xjvf valgrind-3.10.0.tar.bz2
+
+# cd into the newly created directory
+cd valgrind-3.10.0
+
+# 3) Configure it.
+./configure
+
+# 4) Make it
+make
+
+#5) install it (need root)
+sudo make install
